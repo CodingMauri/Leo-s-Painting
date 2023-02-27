@@ -6,10 +6,7 @@ export default function NavBar() {
       <div className="logo-cntnr">
         <div className="logo">LOGO</div>
       </div>
-      <div className="links">
-        <li>Home</li>
-        <li>About</li>
-      </div>
+    
     </div>
   );
 }
