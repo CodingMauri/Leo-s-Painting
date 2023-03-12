@@ -1,52 +1,158 @@
 html,body{
   padding:0;
   margin:0;
-  background: white;
+  box-sizing: border-box;
+  background-color: var(--color-3);
 }
-.App {
-  text-align: center;
+
+:root{
+  --color-primary:#005874;
+  --color-secondary:#1c819e;
+  --color-3:#e6e6d4;
+  --color-4:#ffbe00;
 }
-.navbar-cntnr {
-  display:inline-flex;
-  padding:10px;
-  width:100vw;
-  height:10vh;
-  background-color: lightblue;
+/*******************************
+HERO
+/********************************/
+.hero-container{
+  position:relative;
+  width:100%;
+  height:50rem;
+  background-size:cover;
+  background-position:center;
+}
+.hero-title{
+  display:flex;
+  justify-content: flex-start;
   align-items: center;
+  width:45%;
+  height:100%;
+  float:left;
+  margin: 0 auto;
+  padding-left:2rem;
+  color:white;
+  z-index:1;
   
 }
-.logo-cntnr{
-position:absolute;
-width: 7rem;
-padding-left:2.5rem;
-
-
+.hero-title h1{
+  z-index:1;
 }
-.links{
-  position: absolute;
+
+.hero-container::before{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top:0;
   left:0;
-  top:30px;
-}
-
-li{
-  list-style-type:none;
-}
-
-/******************************************
-
-HERO
-
-*******************************************/
-.house-sliders{
- padding: 0 auto;
- margin:25px;
- height:35vh;
-}
-
-.house-hero img{
-max-width:100%;
-height: 100%;
-object-fit: cover;
+  
 
 }
 
+/*******************************
+NAVBAR
+/********************************/
+
+.navbar{
+  display:flex;
+  position:fixed;
+  z-index:2;
+  width:100%;
+  height:15%;
+  transition: background-color  0.5s ease-in-out;
+
+  
+}
+
+
+.logo{
+  min-width:20rem;
+  height:10;
+
+}
+.logo img{
+  width:100%;
+  
+  height:100%;
+}
+.button-cntnr {
+  display:flex;
+  align-items: center;
+  justify-content: right;
+  gap:2rem;
+  width:100%;
+  height:100%;
+  padding-right:2rem;
+
+}
+button {
+  background-color: #005874; 
+  color: #ffffff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #1c819e; 
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #e6e6d4; 
+}
+
+button:active {
+  background-color: #ffbe00; 
+}
+
+/*******************************
+SERVICES
+/********************************/
+
+.services-cntnr{
+  display:grid;
+  padding-top:2rem;
+  grid-template-columns: 1fr 1fr ;
+
+  width:100%;
+  height:50vh;
+
+}
+.service-info{
+  display:flex;
+  
+
+
+  justify-content: center;
+  
+}
+
+.service-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.service-image img{
+  width:76%;
+  height:76%;
+  border-radius: 10%;
+}
+.service-text{
+  padding:10px;
+}
+.header{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  padding-bottom:2rem;
+}
+.service-text h2{
+  font-size:3.4rem;
+  color:white;
+}
