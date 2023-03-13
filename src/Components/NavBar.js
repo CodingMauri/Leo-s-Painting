@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import logo from "../assets/logo/blue.svg"
+import {motion} from "framer-motion"
 export default function NavBar({scrollToSection}) {
   const [opacity, setOpacity] = useState(0);
 
@@ -27,9 +28,9 @@ export default function NavBar({scrollToSection}) {
 
   return (
     <div className="navbar" style ={navStyle}>
-      <div className="logo">
+      <motion.div whileHover = {{scale:0.8}} onClick = {() => scrollToSection("hero")} className="logo">
           <img src = {logo} alt = "logo" />
-      </div>
+      </motion.div>
       <div className = "button-cntnr">
           <button onClick = {() => scrollToSection('services')}>Services</button>
           <button  onClick = {() => scrollToSection('houses')}>Houses</button>

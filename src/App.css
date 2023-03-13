@@ -100,7 +100,7 @@ NAVBAR
   padding-right:2rem;
 
 }
-button {
+ button {
   background-color: #005874; 
   color: #ffffff; 
   padding: 10px 20px;
@@ -113,7 +113,7 @@ button {
 
 }
 
-button:hover {
+ button:hover {
   background-color: #1c819e; 
   cursor:pointer;
 }
@@ -122,8 +122,7 @@ button:focus {
   outline: none;
   box-shadow: 0px 0px 0px 3px #e6e6d4; 
 }
-
-button:active {
+ button:active {
   background-color: #ffbe00; 
 }
 
