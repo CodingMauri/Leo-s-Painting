@@ -5,6 +5,7 @@ import {motion} from "framer-motion"
 export default function NavBar({scrollToSection}) {
   const [opacity, setOpacity] = useState(0);
 
+
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     if (scrollTop > 10) {
@@ -28,7 +29,8 @@ export default function NavBar({scrollToSection}) {
 
   return (
     <div className="navbar" style ={navStyle}>
-      <motion.div whileHover = {{scale:0.8}} onClick = {() => scrollToSection("hero")} className="logo">
+        
+      <motion.div whileHover = {{scale:0.8, transition:{duration:0.4}}} onClick = {() => scrollToSection("hero")} className="logo">
           <img src = {logo} alt = "logo" />
       </motion.div>
       <div className = "button-cntnr">

@@ -1,5 +1,6 @@
 import "./App.css";
 import Estimate from "./Components/Estimate";
+import Hamburger from "./Components/Hamburger";
 import Hero from "./Components/Hero";
 import Houses from "./Components/Houses";
 import NavBar from "./Components/NavBar";
@@ -11,6 +12,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Hamburger scrollToSection = {scrollToSection}/>
       <NavBar scrollToSection = {scrollToSection} />
       <Hero />
       <Services  />

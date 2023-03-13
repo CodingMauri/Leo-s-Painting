@@ -34,12 +34,39 @@ export default function Houses() {
   ];
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 700,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
+    responsive: [
+        {
+        breakpoint: 9000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 825,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+    }
+    ]
+    
   };
   return (
     <div  className="house-project-cntnr">
