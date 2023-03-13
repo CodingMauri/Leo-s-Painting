@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import logo from "../assets/Leo'sPainting-no-bg.png"
-export default function NavBar() {
+import logo from "../assets/logo/blue.svg"
+import {motion} from "framer-motion"
+export default function NavBar({scrollToSection}) {
   const [opacity, setOpacity] = useState(0);
 
   const handleScroll = () => {
@@ -22,19 +23,18 @@ export default function NavBar() {
   }, []);
 
   const navStyle = {
-      opacity: `${opacity}`,
       backgroundColor: `rgba(230, 230, 212, ${opacity})`,
   }
 
   return (
     <div className="navbar" style ={navStyle}>
-      <div className="logo">
+      <motion.div whileHover = {{scale:0.8}} onClick = {() => scrollToSection("hero")} className="logo">
           <img src = {logo} alt = "logo" />
-      </div>
+      </motion.div>
       <div className = "button-cntnr">
-          <button>Services</button>
-          <button>Houses</button>
-          <button>Get an Estimate</button>
+          <button onClick = {() => scrollToSection('services')}>Services</button>
+          <button  onClick = {() => scrollToSection('houses')}>Houses</button>
+          <button  onClick = {() => scrollToSection('estimate')}>Get an Estimate</button>
       </div>
     </div>
   );

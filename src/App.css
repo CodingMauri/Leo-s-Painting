@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Secular+One&display=swap');
 html,body{
   padding:0;
   margin:0;
@@ -10,6 +13,13 @@ html,body{
   --color-secondary:#1c819e;
   --color-3:#e6e6d4;
   --color-4:#ffbe00;
+  
+
+  --font-title:"Secular One","sans-serif";
+  --font-text:"Climate Crisis","sans-serif";
+}
+h1,h2,h3,h4{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 /*******************************
 HERO
@@ -17,7 +27,7 @@ HERO
 .hero-container{
   position:relative;
   width:100%;
-  height:50rem;
+  height:100vh;
   background-size:cover;
   background-position:center;
 }
@@ -35,9 +45,14 @@ HERO
   
 }
 .hero-title h1{
+  font-size:5rem;
   z-index:1;
+  font-family:var(--font-title)
 }
-
+.subtitle{
+  font-size:3rem;
+  text-transform:uppercase;
+}
 .hero-container::before{
   content:"";
   width:100%;
@@ -59,7 +74,7 @@ NAVBAR
   position:fixed;
   z-index:2;
   width:100%;
-  height:15%;
+  height:10%;
   transition: background-color  0.5s ease-in-out;
 
   
@@ -67,13 +82,12 @@ NAVBAR
 
 
 .logo{
-  min-width:20rem;
-  height:10;
+  min-width:10%;
+  
 
 }
 .logo img{
   width:100%;
-  
   height:100%;
 }
 .button-cntnr {
@@ -86,7 +100,7 @@ NAVBAR
   padding-right:2rem;
 
 }
-button {
+ button {
   background-color: #005874; 
   color: #ffffff; 
   padding: 10px 20px;
@@ -96,18 +110,19 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
 }
 
-button:hover {
+ button:hover {
   background-color: #1c819e; 
+  cursor:pointer;
 }
 
 button:focus {
   outline: none;
   box-shadow: 0px 0px 0px 3px #e6e6d4; 
 }
-
-button:active {
+ button:active {
   background-color: #ffbe00; 
 }
 
@@ -121,12 +136,13 @@ SERVICES
   grid-template-columns: 1fr 1fr ;
 
   width:100%;
-  height:50vh;
+  height:100%;
+  
 
 }
 .service-info{
   display:flex;
-  
+  border-radius:30px;
 
 
   justify-content: center;
@@ -145,6 +161,7 @@ SERVICES
 }
 .service-text{
   padding:10px;
+  color:white;
 }
 .header{
   display:flex;
@@ -153,6 +170,167 @@ SERVICES
   padding-bottom:2rem;
 }
 .service-text h2{
+  font-family: var(--font-title);
   font-size:3.4rem;
   color:white;
+}
+.service-text p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0 0 20px 0;
+  padding-left:1rem;
+}
+
+p strong {
+  font-weight: bold;
+}
+
+p em {
+  font-style: italic;
+}
+
+p:first-of-type {
+  text-align: left;
+
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+/*******************************
+HOUSES
+/********************************/
+.house-project-cntnr{
+  background-color:var(--color-primary);
+  margin:0 auto;
+  height:80vh;
+}
+.house-header{
+  display: flex;
+  width: 100%;
+  height:25%;
+  justify-content: center;
+  align-items: center;
+
+}
+.house-header h2{
+  color:white;
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+.project-carousel{
+  padding:1rem;
+  overflow:hidden;
+}
+.house-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100%;
+  max-height: 100%;
+  padding:1rem;
+  padding-left:4rem;
+  
+}
+.slick-slide img {
+
+  width: 80%;
+  justify-content: center;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/*******************************
+CONTACT
+/********************************/
+.contact-header{
+  display:flex;
+  width: 100%;
+  height:auto;
+  justify-content: center;
+  align-items: center;
+}
+.contact-header h2{
+  color:#ffffff;
+  font-size:3rem;
+  font-family:var(--font-title);
+  
+}
+.contact-section {
+  top: 0;
+  padding: 100px 150px;
+  height: 100%;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns:repeat(2, 1fr);
+  
+}
+.contact {
+
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 25em;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border: 1px solid black;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color:black;
+  padding: 5px 10px;
+}
+
+::placeholder {
+  color: black;
+}
+
+#msg {
+  height: 280px;
+  resize: none;
+  font-family: sans-serif;
+}
+.form-submit-btn {
+  background:var(--color-secondary);
+  color: white;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  display: block;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.merchant-info{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+
+
+
+}
+.merchant-header{
+  width:100%;
+
+}
+.m-info-header{
+  width:100%;
+}
+ .merchant-info h2{
+  color:white;
+  font-size:4rem;
+  font-family: var(--font-title);
+  padding:0;
+  margin:0;
 }
