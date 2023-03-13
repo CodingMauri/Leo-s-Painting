@@ -21,7 +21,7 @@ export default function NavBar({scrollToSection}) {
 
   useEffect(() => {
     handleScroll();
-  }, []);
+  });
 
   const navStyle = {
       backgroundColor: `rgba(230, 230, 212, ${opacity})`,
